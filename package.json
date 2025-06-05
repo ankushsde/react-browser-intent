@@ -1,6 +1,6 @@
 {
-  "name": "react-browser-intent",
-  "version": "1.0.1",
+  "name": "react-browser-safe-intent",
+  "version": "1.0.0",
   "description": "A React hook utility to safely trigger browser-restricted APIs using user gestures.",
   "keywords": [
     "react",
