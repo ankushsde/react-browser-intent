@@ -1,0 +1,30 @@
+{
+  "name": "react-browser-intent",
+  "version": "1.0.1",
+  "description": "A React hook utility to safely trigger browser-restricted APIs using user gestures.",
+  "keywords": [
+    "react",
+    "hooks",
+    "browser",
+    "gesture",
+    "autoplay",
+    "clipboard",
+    "notifications",
+    "intent"
+  ],
+  "homepage": "https://github.com/ankushsde/react-browser-intent#readme",
+  "bugs": {
+    "url": "https://github.com/ankushsde/react-browser-intent/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ankushsde/react-browser-intent.git"
+  },
+  "license": "MIT",
+  "author": "Ankush",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
