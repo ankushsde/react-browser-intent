@@ -1,15 +1,48 @@
-# react-browser-intent
+# react-browser-safe-intent
 
-A React hook library to safely trigger browser-restricted APIs like media playback, notifications, and geolocation after detecting trusted user gestures.
+A gesture-aware React hook utility for safely triggering browser-restricted APIs — like media playback, notifications, clipboard access, and geolocation — by modeling a trusted execution flow.
 
-## Features
+> Built to work with, not against, browser policies.
 
-- Autoplay video/audio after user gesture
-- Request notification permission safely
-- Trigger geolocation access after interaction
-- Easy-to-use React hooks
+---
 
-## Installation
+## 🔍 Why This Exists
+
+Modern browsers restrict certain APIs unless the user has performed a trusted interaction (e.g. click, keypress). These include:
+
+- `video.play()` with sound
+- `navigator.clipboard.writeText()`
+- `Notification.requestPermission()`
+- `navigator.geolocation.getCurrentPosition()`
+
+React provides no built-in way to manage this browser-level trust boundary.
+
+This library introduces **gesture-gated execution primitives** — hooks that **queue actions** and execute them **only after gesture**.
+
+---
+
+## 🧠 Core Concepts
+
+- **Gesture-aware execution**: Runs only after browser confirms user interaction.
+- **Intent queue**: Stores API calls until it's safe to execute.
+- **Hooks-first API**: Drop-in usage inside any React component.
+
+---
+
+## 🚀 Features
+
+- ✅ `useGestureUnlock()`  
+  Tracks whether a user gesture (click, keypress) has occurred.
+
+- ✅ `useSafeMedia(ref, gesture, options)`  
+  Plays and unmutes video/audio only after gesture is confirmed.
+
+- ✅ `usePermissionIntent(type, gesture)`  
+  Requests permission for `notifications` or `geolocation` post-gesture.
+
+---
+
+## 📦 Installation
 
 ```bash
-npm install react-browser-intent
+npm install react-browser-safe-intent
